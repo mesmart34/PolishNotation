@@ -4,6 +4,16 @@
 int main()
 {
 	auto pn = PolishNotation();
-	std::cout << pn.Convert("f = D(2 + (4 / 3) + 6 * (3 - 2))") << std::endl;
+
+	std::string line;
+
+	while(true)
+	{
+		std::getline(std::cin, line);
+		if (line == "stop")
+			break;
+		std::cout << pn.Convert(line) << std::endl;
+	} 
+
 	return 0;
 }

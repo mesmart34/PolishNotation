@@ -8,7 +8,6 @@ int PolishNotation::OpPreced(const char c) const
 	{
 	case '!':
 		return 4;
-
 	case '*':
 	case '/':
 	case '%':
@@ -182,6 +181,7 @@ std::string PolishNotation::Convert(const std::string& infix)
 		result += ' ';
 		output.pop();
 	}
+	result.pop_back();
 	return result;
 }
 
